@@ -3,6 +3,7 @@
 }
 
 apps.stldata.org {
+    redir /crime /crime/
     route /crime* {
         uri strip_prefix /crime
         reverse_proxy crime-dashboard:3838
