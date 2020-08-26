@@ -1,0 +1,8 @@
+{
+    email bransonfox@umsl.edu
+}
+
+apps.stldata.org {
+    root * /usr/share/caddy/
+    file_server
+}

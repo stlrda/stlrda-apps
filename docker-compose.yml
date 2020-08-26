@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+    caddy:
+        container_name: caddy-server
+        image: caddy:2.0.0-alpine
+        restart: always
+        ports:
+            - 80:80
+            - 443:443
+        volumes: 
+            - ./static:/usr/share/caddy
+            - ./Caddyfile:/etc/caddy/Caddyfile
+            - ./caddy_data:/data
