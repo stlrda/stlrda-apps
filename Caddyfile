@@ -4,7 +4,7 @@
 
 apps.stldata.org {
     route /crime* {
-        uri strip_prefix /crime*
+        uri strip_prefix /crime
         reverse_proxy crime-dashboard:3838
     }
 
