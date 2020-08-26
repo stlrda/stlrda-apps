@@ -6,3 +6,8 @@ apps.stldata.org {
     root * /usr/share/caddy/
     file_server
 }
+
+route /crime {
+    uri strip_prefix /crime
+    reverse_proxy crime-dashboard:3838
+}

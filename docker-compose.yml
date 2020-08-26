@@ -11,3 +11,11 @@ services:
             - ./static:/usr/share/caddy
             - ./Caddyfile:/etc/caddy/Caddyfile
             - ./caddy_data:/data
+    crime-dashboard:
+        container_name: crime-dashboard
+        image: bransonf/stlcrime:latest
+        restart: always
+        ports:
+            - 3838:3838
+        depends_on: 
+            - caddy
