@@ -44,8 +44,8 @@ h4 {
 .hero {
     height: 600px;
     width: 100%;
+    background-image: url('/img/axiom-pattern.png'), linear-gradient(to right, var(--dark-blue), var(--light-blue) 200%);
     background-color:var(--dark-blue);
-    background-image: url('/img/axiom-pattern.png');
     color: white;
     border-bottom: 1px solid var(--gray);
 }
