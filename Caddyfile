@@ -11,3 +11,7 @@ apps.stldata.org {
     root * /usr/share/caddy/
     file_server
 }
+
+app.stldata.org {
+    redir apps.stldata.org/crime permanent 
+}
