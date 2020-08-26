@@ -3,15 +3,11 @@
 }
 
 apps.stldata.org {
-    route /crime {
-        uri strip_prefix /crime
+    route /crime* {
+        uri strip_prefix /crime*
         reverse_proxy crime-dashboard:3838
     }
 
     root * /usr/share/caddy/
     file_server
-}
-
-app.stldata.org {
-    redir apps.stldata.org permanent
 }
