@@ -31,7 +31,5 @@ services:
         container_name: essential-workers
         image: docker.pkg.github.com/stlrda/essential-workers/essential-workers:latest
         restart: always
-        ports:
-            - 3000:80
         depends_on:
             - caddy
