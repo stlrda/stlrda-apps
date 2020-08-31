@@ -8,6 +8,12 @@ apps.stldata.org {
         uri strip_prefix /crime
         reverse_proxy crime-dashboard:3838
     }
+    
+    redir /essential-workers /essential-workers/
+    route /essential-workers* {
+        uri strip_prefix /essential-workers
+        reverse_proxy essential-workers:3000
+    }
 
     root * /usr/share/caddy/
     file_server
