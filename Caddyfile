@@ -28,5 +28,5 @@ stlouisdata.org {
 }
 
 stlouisdata.com {
-    redit https://stldata.org
+    redir https://stldata.org
 }
