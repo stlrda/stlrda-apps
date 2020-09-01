@@ -24,7 +24,7 @@ app.stldata.org {
 }
 
 stlouisdata.org {
-    redir https://stldata.org
+    redir https://rdx.stldata.org
 }
 
 stlouisdata.com {
