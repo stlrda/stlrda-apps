@@ -18,7 +18,7 @@ services:
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
             - /home/ubuntu/.docker/config.json:/config.json
-        command: watchtower crime-dashboard essential-workers --interval 120
+        command: watchtower crime-dashboard essential-workers data-commons --interval 120
     crime-dashboard:
         container_name: crime-dashboard
         image: bransonf/stlcrime:latest
@@ -30,6 +30,12 @@ services:
     essential-workers:
         container_name: essential-workers
         image: docker.pkg.github.com/stlrda/essential-workers/essential-workers:latest
+        restart: always
+        depends_on:
+            - caddy
+    data-commons:
+        container_name: data-commons
+        image: docker.pkg.github.com/stlrda/open-data-commons/crime:latest
         restart: always
         depends_on:
             - caddy

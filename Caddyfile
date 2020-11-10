@@ -15,6 +15,12 @@ apps.stldata.org {
         reverse_proxy essential-workers:80
     }
 
+    redir /data-commons /data-commons/
+    route /data-commons* {
+        uri strip_prefix /data-commons
+        reverse_proxy data-commons:80
+    }
+
     root * /usr/share/caddy/
     file_server
 }
