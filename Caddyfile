@@ -36,3 +36,7 @@ stlouisdata.org {
 stlouisdata.com {
     redir https://stldata.org
 }
+
+threadstl.com {
+    redir https://threadstl.org
+}
