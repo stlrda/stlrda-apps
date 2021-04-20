@@ -15,11 +15,13 @@ apps.stldata.org {
         reverse_proxy essential-workers:80
     }
 
+    redir /data-commons/crime /data-commons/crime/
     route /data-commons/crime* {
         uri strip_prefix /data-commons/crime
         reverse_proxy odc-crime:80
     }
 
+    redir /data-commons/redb /data-commons/redb/
     route /data-commons/redb* {
         uri strip_prefix /data-commons/redb
         reverse_proxy odc-redb:80
