@@ -21,7 +21,7 @@ services:
         command: watchtower crime-dashboard essential-workers odc-crime odc-redb --interval 120
     crime-dashboard:
         container_name: crime-dashboard
-        image: bransonf/stlcrime:latest
+        image: docker.pkg.github.com/bransonf/dashboard/crime-dashboard:latest
         restart: always
         ports:
             - 3838:3838
